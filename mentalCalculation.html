@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://csstools.github.io/sanitize.css/" />
+    <link rel="stylesheet" href="mentalCalculation.css" />
+    <script src="mentalCalculation.js" defer></script>
+    <title></title>
+  </head>
+  <body>
+    <main id="main">
+      <div id="questionArea"></div>
+      <div id="formArea">
+        <div class="setting">
+          <div class="digits">
+            <div>
+              <input type="radio" id = "1digits_1" name = "digit_1" value = 1 checked>
+              <label for="1digits_1">1桁</label>
+            </div>
+            <div>
+              <input type="radio" id = "2digits_1" name = "digit_1" value = 2>
+              <label for="2digits_1">2桁</label>
+            </div>
+            <div>
+              <input type="radio" id = "3digits_1" name = "digit_1" value = 3>
+              <label for="3digits_1">3桁</label>
+            </div>
+          </div>
+
+          <div class = "operator">
+            <div>
+              <input type="radio" name = "operators" value = "+" checked>
+              <label>足す(+)</label>
+            </div>
+            <div>
+              <input type="radio" name = "operators" value = "-">
+              <label>引く(-)</label>
+            </div>
+            <div>
+              <input type="radio" name = "operators" value = "×">
+              <label>掛ける(×)</label>
+            </div>
+          </div>
+          
+          <div class="digits">
+            <div>
+              <input type="radio" id = "1digits_2" name = "digit_2" value = 1 checked>
+              <label for="1digits_2">1桁</label>
+            </div>
+            <div>
+              <input type="radio" id = "2digits_2" name = "digit_2" value = 2>
+              <label for="2digits_2">2桁</label>
+            </div>
+            <div>
+              <input type="radio" id = "3digits_1" name = "digit_2" value = 3>
+              <label for="3digits_2">3桁</label>
+            </div>
+          </div>
+
+        </div>
+        <div>
+          <label>問題数</label>
+          <input type="text" id = "questionLengthInput" value = 10>
+        </div>
+      </div>
+      <div id="resultArea">
+      </div>
+      <div id="buttonArea">
+        <button id="startButton">Start!</button>
+        <button class="disappeared" id="checkButton">Check</button>
+        <button class="disappeared" id="nextButton">Next</button>
+        <button class="disappeared" id="resultButton">結果を見る</button>
+      </div>
+    </main>
+  </body>
+</html>
