@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://csstools.github.io/sanitize.css/" />
     <link rel="stylesheet" href="mentalCalculation.css" />
     <script src="mentalCalculation.js" defer></script>
-    <title>計算特訓 ~足し算・引き算・掛け算〜</title>
+    <title>計算特訓 〜足し算・引き算・掛け算〜</title>
   </head>
   <body>
     <main id="main">
+
       <div id="questionArea"></div>
+
       <div id="formArea">
         <div class="setting">
           <div class="digits">
@@ -58,20 +60,21 @@
               <label for="3digits_2">3桁</label>
             </div>
           </div>
+          <div class="questionLengthInput">
+            <label>問題数</label>
+            <input type="text" id = "questionLengthInput" value = 10>
+          </div>
+        </div>
 
-        </div>
-        <div>
-          <label>問題数</label>
-          <input type="text" id = "questionLengthInput" value = 10>
-        </div>
       </div>
+
       <div id="resultArea">
       </div>
       <div id="buttonArea">
-        <button id="startButton">Start!</button>
-        <button class="disappeared" id="checkButton">Check</button>
-        <button class="disappeared" id="nextButton">Next</button>
-        <button class="disappeared" id="resultButton">結果を見る</button>
+        <div id="startButton" class="buttons">Start!</div>
+        <div class="disappeared" id="checkButton">Check</div>
+        <div class="disappeared" id="nextButton">Next</div>
+        <div class="disappeared" id="resultButton">結果を見る</div>
       </div>
     </main>
   </body>

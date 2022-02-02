@@ -2,6 +2,61 @@
   display: none;
 }
 
+.formArea{
+  max-width: 660px;
+  margin: 0 auto;
+}
+
 .setting{
   display: flex;
+  justify-content: space-between;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.questionLengthInput{
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+
+.buttons{
+  border: solid 1px black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 55px auto;
+  max-width: 500px;
+}
+
+#questionArea{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.inputArea{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#resultArea{
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.resultBox{
+  margin-top: 35px;
+  max-width: 550px;
+  text-align: center;
+}
+
+.correct{
+  color: rgb(102, 165, 8);
+}
+
+.wrong{
+  font-size: large;
+  font-weight: bold;
+  background-color: yellow;
 }

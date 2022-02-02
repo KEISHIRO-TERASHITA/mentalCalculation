@@ -78,12 +78,18 @@ function startButtonClick() {
 
   createQuestion();
   formArea.innerHTML = "";
+  const inputArea = document.createElement("div");
+  inputArea.className = "inputArea";
+  formArea.appendChild(inputArea);
   const form = document.createElement("input");
   form.type = "text";
   form.id = "inputAnswer";
-  formArea.appendChild(form);
+  const label = document.createElement("label");
+  label.innerHTML = "答え";
+  inputArea.appendChild(label);
+  inputArea.appendChild(form);
   startButton.className = "disappeared";
-  checkButton.className = "";
+  checkButton.className = "buttons";
 }
 
 function nextButtonClick() {
@@ -91,7 +97,7 @@ function nextButtonClick() {
   const inputAnswer = document.getElementById("inputAnswer");
   inputAnswer.value = "";
   nextButton.className = "disappeared";
-  checkButton.className = "";
+  checkButton.className = "buttons";
 }
 
 function checkButtonClick() {
@@ -102,24 +108,31 @@ function checkButtonClick() {
   ansBox.innerHTML = "=" + `${ans}`;
   questionArea.appendChild(ansBox);
   checkButton.className = "disappeared";
-  nextButton.className = "";
+  nextButton.className = "buttons";
 }
 
 function resultButtonClick() {
   resultButton.className = "disappeared";
   for (let i = 0; i < questionLength; i++) {
+    const resultBox = document.createElement("div");
+    resultBox.className = "resultBox";
     const showQuestion = document.createElement("div");
     showQuestion.innerHTML = questions[i] + "=" + answers[i];
     const showAnswer = document.createElement("div");
     if (userAnswers[i] === answers[i]) {
       showAnswer.innerHTML = "あなたの答え　　" + userAnswers[i] + "　　正解！";
+      showAnswer.className = "correct";
+      showQuestion.className = "correct";
       score++;
     } else {
       showAnswer.innerHTML =
         "あなたの答え　　" + userAnswers[i] + "　　不正解…";
+        showAnswer.className = "wrong";
+        showQuestion.className = "wrong";
     }
-    resultArea.appendChild(showQuestion);
-    resultArea.appendChild(showAnswer);
+    resultArea.appendChild(resultBox);
+    resultBox.appendChild(showQuestion);
+    resultBox.appendChild(showAnswer);
   }
 }
 
@@ -131,7 +144,7 @@ nextButton.addEventListener("click", () => {
   if (counter === questionLength - 1) {
     questionArea.innerHTML = "";
     formArea.innerHTML = "";
-    resultButton.className = "";
+    resultButton.className = "buttons";
     nextButton.className = "disappeared";
   } else {
     counter++;
